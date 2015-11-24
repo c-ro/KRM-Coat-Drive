@@ -176,7 +176,7 @@ header {
     width: 100%;
     min-height: auto;
     text-align: center;
-    color: #fff;
+    color: #000;
     background-image: url(../img/header.jpg);
     background-position: center;
     -webkit-background-size: cover;
@@ -186,6 +186,7 @@ header {
 }
 
 header .header-content {
+    margin-top: 10%;
     position: relative;
     width: 100%;
     padding: 100px 15px;
@@ -513,4 +514,12 @@ table {
 
 #notes {
     color: black;
+}
+
+/*.name-input {
+
+}*/
+
+textarea{
+    resize: none;
 }

@@ -15,8 +15,7 @@ angular.module('krm').factory('list', ['$http', 'alerts',
 			$http.post('/list', person).success(
 				function(error, response){
 					if (error.message) {
-						console.log(error.message);
-						alerts.open(error.message + " -- Bad Input", "danger");
+						alerts.open(error.errors.phone.message, "danger");
 					} else {
 						list.persons.push(response);
 						list.getAll();

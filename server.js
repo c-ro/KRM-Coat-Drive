@@ -14,16 +14,17 @@ mongoose.connect('mongodb://localhost/krm', function(err) {  //mongodb://heroku_
 });
 
 var personSchema = new Schema({
-	name: { type: String }, 
-	address: { type: String },
-	// phone: { type: String, validate: {
-	// 			validator: function(v) {
-	// 				return (/d{3}-d{3}-d{4}/).test(v);
-	// 			},
-	// 				message: '{VALUE} is not a valid phone number!'
-	// 			}
-	// 		},
-	qty: { type: Number },
+	firstname: { type: String, required: true },
+	lastname: { type: String, required: true },
+	address: { type: String, required: true },
+	phone: { type: String, validate: {
+				validator: function(v) {
+					return (/^(\([0-9]{3}\)\s*|[0-9]{3}\-)[0-9]{3}-[0-9]{4}$/).test(v);
+				},
+					message: '{VALUE} is not a valid phone number!'
+				}
+			},
+	qty: { type: String },
 	notes: { type: String }
 });
 

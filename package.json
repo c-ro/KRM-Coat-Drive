@@ -1,7 +1,7 @@
 {
-  "name": "pickup",
+  "name": "krm",
   "version": "1.0.0",
-  "description": "a grocery list app",
+  "description": "a donation pledging app",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
