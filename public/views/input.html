@@ -1,0 +1,49 @@
+<div class="container">
+	<form>
+		<div id="form-container">
+			<div id="inputs-container">
+				<tt id="item-expression">{{qty || 0}} @ ${{price || 0}} per {{units}}</tt>
+				<input id="name-input" placeholder=" new item" type="text&quot;"><br>
+				<input id="qty-input" placeholder=" quantity" type="text&quot;"><br>
+				<!-- units SELECT BUTTONS -->
+
+
+				<div class="btn-group-justified">
+					<label class="btn btn-units" for="ct"><input checked id="ct" name=
+					"unitselect" type="radio" value="ct"> ct.</label> <label class=
+					"btn btn-units" for="lb"><input id="lb" name="unitselect" type="radio"
+					value="lb"> lbs</label> <label class="btn btn-units" for="oz"><input id=
+					"oz" name="unitselect" type="radio" value="oz"> oz.</label>
+				</div>
+				<input id="price-input" placeholder=" price" type="text&quot;"><br>
+
+
+				<div class="form-group">
+					<div>
+						<select class="form-control" id="selectcategory" name="selectcategory">
+                            <option value="meat">meat</option>
+                            <option value="produce">produce</option>
+                            <option value="frozen">frozen</option>
+                            <option value="beverages">beverages</option>
+                            <option value="dryandcanned">dryandcanned</option>
+                            <option value="personal">personal</option>
+                            <option value="home">home</option>
+                            <option value="pets">pets</option>
+                            <option value="bakery">bakery</option>
+						</select>
+					</div>
+				</div>
+			</div>
+
+
+			<div id="button-container">
+				<button class="btn btn-primary btn-xl page-scroll" id="add-button" type=
+				"submit">add</button>
+			</div>
+
+
+			<div>
+			</div>
+		</div>
+	</form>
+</div>

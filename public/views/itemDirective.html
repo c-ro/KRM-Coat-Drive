@@ -1,0 +1,8 @@
+<td class="crossout" ng-click="crossout()">&#9999</td>
+<td ng-click="inputDialog(item)">{{item.name}}</td>
+<!-- <td>{{item.qty}}</td>
+<td>{{item.price}}</td> -->
+<td>{{item.qty * item.price}}</td>
+<td><button class="btn btn-danger" ng-click="deleteItem(item._id)">del</button></td>
+<!-- <td><button class="btn btn-warning" ng-click="inputDialog(item)">edit</button></td> -->
+<!-- <td><button class="btn btn-success" ng-click="purchaseItem(item)">$</button></td> -->

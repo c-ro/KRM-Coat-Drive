@@ -1,0 +1,33 @@
+<div>
+  <script type="text/ng-template" id="alert.html">
+    <div class="alert" style="background-color:#fa39c3;color:white" role="alert">
+      <div ng-transclude></div>
+    </div>
+  </script>
+  <uib-alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</uib-alert>
+</div>
+
+<div class="container">
+	<form>
+		<div id="form-container">
+			<div id="inputs-container">
+				<br>
+
+				<input class="form-control" id="first-name-input" placeholder=" First Name" type="text" ng-model="person.name"><br>
+<!-- 				<input class="form-control" id="last-name-input" placeholder=" Last Name" type="text"><br> -->
+				<input class="form-control" id="address" placeholder=" Address" type="text" ng-model="person.address"><br>
+				<input class="form-control" id="qty-input" placeholder=" quantity" type="text" ng-model="person.qty"><br>
+				<textarea class="form-control" id="notes" placeholder="notes. . ." row="5" col="10" ng-model="person.notes"></textarea><br>
+
+
+			<div id="button-container">
+				<button class="btn btn-primary" id="add-button" type="submit" ng-click="addPerson()">add</button>
+			</div>
+
+
+			<div>
+				&nbsp
+			</div>
+		</div>
+	</form>
+</div>

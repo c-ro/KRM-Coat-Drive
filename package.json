@@ -1,0 +1,24 @@
+{
+  "name": "pickup",
+  "version": "1.0.0",
+  "description": "a grocery list app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Carl Overton",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.4.7",
+    "angular-recaptcha": "^2.2.5",
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "mongo": "^0.1.0",
+    "mongoose": "^4.2.6",
+    "ng-dialog": "^0.5.5"
+  },
+  "engines": {
+    "node": "0.12.7"
+  }
+}

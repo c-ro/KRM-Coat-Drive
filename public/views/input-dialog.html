@@ -1,0 +1,38 @@
+<div class="ngdialog-message input-dialog" ng-controller="AppCtrl">
+	<form>
+		<td><input class="form-control" placeholder="name" ng-model="item.name"></td>
+		<td><input class="form-control" placeholder="qty" ng-model="item.qty"></td>
+		<td><input class="form-control" placeholder="price" ng-model="item.price"></td>
+		<td ng-model="item"> Subtotal: {{item.qty * item.price || 0}}</td>
+	</form>
+</div>
+<div class="ngdialog-buttons">
+    <button type="button" class="ngdialog-button ngdialog-button-secondary" ng-click="closeThisDialog('Cancel')">Cancel</button>
+    <button type="button" class="ngdialog-button ngdialog-button-primary" ng-click="confirm('Save')">Save</button>
+</div>
+
+		<tr>
+			<th colspan="6">
+				<input ng-model="item.name" placeholder="  name"></input>
+				<input ng-model="item.qty" placeholder=" qty"></input>
+				<input ng-model="item.price" placeholder="  price"></input>
+			</th>
+			<th colspan="1"><button class="btn-default" ng-model="item" ng-click="addItem(item)">add item</button></th>
+
+		</tr>
+		
+<!-- <div>
+	<table class="table" ng-model="item">
+		<tr>
+			<th>date</th>
+			<th>qty</th>
+			<th>price</th>
+		</tr>
+		<tr ng-repeat="doc in item.purchases">
+			<td>{{doc.date | date}}</td>
+			<td>{{doc.qty}}</td>
+			<td>{{doc.price | currency}}</td>
+			<td ng-click="deletePurchase(item._id, doc.date)">x</td>
+		</tr>
+	</table>
+</div> -->
