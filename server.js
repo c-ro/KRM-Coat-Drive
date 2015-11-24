@@ -5,7 +5,7 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-mongoose.connect('mongodb://localhost/krm', function(err) {  //mongodb://heroku_ld8gq5ss:d4s4p3klt6q5fkmc0llnuucebm@ds057204.mongolab.com:57204/heroku_ld8gq5ss
+mongoose.connect('mongodb://heroku_6d4b2cmv:b25eant3f0dk4lnb9grm0csjnh@ds057954.mongolab.com:57954/heroku_6d4b2cmv', function(err) {  //mongodb://heroku_ld8gq5ss:d4s4p3klt6q5fkmc0llnuucebm@ds057204.mongolab.com:57204/heroku_ld8gq5ss
     if (err) {
         console.log(err);
     } else {
