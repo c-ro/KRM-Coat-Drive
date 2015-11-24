@@ -87,24 +87,7 @@ app.put('/list/:id', function (req, res) {
 	});
 });
 
-// app.put('/list/purchase/:id', function (req, res) {
-// 	Person.findByIdAndUpdate(req.params.id, {$push: {"purchases": req.body}},  {safe: true, upsert: true, new : true}, function(err, person){
-		
-// 		if (err){
-// 			console.log(err);
-// 		}
-
-// 		res.send(person);
-// 	});
-// });
-
-// app.put('/purchase/remove/:id/:date', function(req, res){
-// 	Person.update( {"_id": req.params.id}, { $pull: { purchases: { date: req.params.date } } }, function (err, person){
-// 		res.json(person);
-// 	});
-// });
-
-app.listen(3000); //process.env.PORT || 
+app.listen(process.env.PORT || 3000);
 
 var time = new Date();
 time = time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds();
