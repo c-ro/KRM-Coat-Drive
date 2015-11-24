@@ -7,7 +7,7 @@ var Schema = mongoose.Schema;
 
 mongoose.connect('mongodb://localhost/krm', function(err) {  //mongodb://heroku_ld8gq5ss:d4s4p3klt6q5fkmc0llnuucebm@ds057204.mongolab.com:57204/heroku_ld8gq5ss
     if (err) {
-        console.err(err);
+        console.log(err);
     } else {
         console.log('Connected');
     }
