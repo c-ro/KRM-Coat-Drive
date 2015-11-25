@@ -7,7 +7,7 @@ angular.module('krm').factory('list', ['$http', 'alerts',
 		list.getAll = function() {
 			$http.get('/list').success(function(res){
 				console.log("got data from mongo. . .");
-				angular.copy(res, list.people);
+				angular.copy(res, list.persons);
 			});
 		};
 

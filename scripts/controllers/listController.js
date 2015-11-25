@@ -8,6 +8,8 @@
 
 	$scope.alerts = alerts;
 
+	$scope.pledges = 17;
+
 	$scope.addPerson = function(){
 
 		console.log("add");
