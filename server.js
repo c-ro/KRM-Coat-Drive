@@ -24,7 +24,7 @@ var personSchema = new Schema({
 					message: '{VALUE} is not a valid phone number!'
 				}
 			},
-	qty: { type: String },
+	qty: { type: Number },
 	notes: { type: String }
 });
 

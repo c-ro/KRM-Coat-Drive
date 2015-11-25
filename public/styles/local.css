@@ -45,7 +45,7 @@ p {
     line-height: 1.5;
 }
 
-.bg-primary {
+.bg-qty {
     background-color: Orchid;
 }
 
@@ -322,7 +322,7 @@ header .header-content .header-content-inner p {
     margin: 0 auto 20px;
 }
 
-.text-primary {
+.text-qty {
     color: Orchid;
 }
 
@@ -384,7 +384,7 @@ fieldset[disabled] .btn-default.active {
     background-color: #222;
 }
 
-.btn-primary {
+.btn-qty {
     border-color: Orchid;
     color: #fff;
     background-color: Orchid;
@@ -393,46 +393,46 @@ fieldset[disabled] .btn-default.active {
     transition: all .35s;
 }
 
-.btn-primary:hover,
-.btn-primary:focus,
-.btn-primary.focus,
-.btn-primary:active,
-.btn-primary.active,
-.open > .dropdown-toggle.btn-primary {
+.btn-qty:hover,
+.btn-qty:focus,
+.btn-qty.focus,
+.btn-qty:active,
+.btn-qty.active,
+.open > .dropdown-toggle.btn-qty {
     border-color: #ed431f;
     color: #fff;
     background-color: #ee4b28;
 }
 
-.btn-primary:active,
-.btn-primary.active,
-.open > .dropdown-toggle.btn-primary {
+.btn-qty:active,
+.btn-qty.active,
+.open > .dropdown-toggle.btn-qty {
     background-image: none;
 }
 
-.btn-primary.disabled,
-.btn-primary[disabled],
-fieldset[disabled] .btn-primary,
-.btn-primary.disabled:hover,
-.btn-primary[disabled]:hover,
-fieldset[disabled] .btn-primary:hover,
-.btn-primary.disabled:focus,
-.btn-primary[disabled]:focus,
-fieldset[disabled] .btn-primary:focus,
-.btn-primary.disabled.focus,
-.btn-primary[disabled].focus,
-fieldset[disabled] .btn-primary.focus,
-.btn-primary.disabled:active,
-.btn-primary[disabled]:active,
-fieldset[disabled] .btn-primary:active,
-.btn-primary.disabled.active,
-.btn-primary[disabled].active,
-fieldset[disabled] .btn-primary.active {
+.btn-qty.disabled,
+.btn-qty[disabled],
+fieldset[disabled] .btn-qty,
+.btn-qty.disabled:hover,
+.btn-qty[disabled]:hover,
+fieldset[disabled] .btn-qty:hover,
+.btn-qty.disabled:focus,
+.btn-qty[disabled]:focus,
+fieldset[disabled] .btn-qty:focus,
+.btn-qty.disabled.focus,
+.btn-qty[disabled].focus,
+fieldset[disabled] .btn-qty.focus,
+.btn-qty.disabled:active,
+.btn-qty[disabled]:active,
+fieldset[disabled] .btn-qty:active,
+.btn-qty.disabled.active,
+.btn-qty[disabled].active,
+fieldset[disabled] .btn-qty.active {
     border-color: Orchid;
     background-color: Orchid;
 }
 
-.btn-primary .badge {
+.btn-qty .badge {
     color: Orchid;
     background-color: MediumOrchid;
 }
@@ -523,3 +523,50 @@ table {
 textarea{
     resize: none;
 }
+
+.btn-qty {
+  color: #fff;
+  background-color: ;
+  border-color: Orchid;
+}
+.btn-qty:hover,
+.btn-qty:focus,
+.btn-qty.focus,
+.btn-qty:active,
+.btn-qty.active,
+.open > .dropdown-toggle.btn-qty {
+  color: #fff;
+  background-color: DarkOrchid;
+  border-color: Orchid;
+}
+.btn-qty:active,
+.btn-qty.active,
+.open > .dropdown-toggle.btn-qty {
+  background-image: none;
+}
+.btn-qty.disabled,
+.btn-qty[disabled],
+fieldset[disabled] .btn-qty,
+.btn-qty.disabled:hover,
+.btn-qty[disabled]:hover,
+fieldset[disabled] .btn-qty:hover,
+.btn-qty.disabled:focus,
+.btn-qty[disabled]:focus,
+fieldset[disabled] .btn-qty:focus,
+.btn-qty.disabled.focus,
+.btn-qty[disabled].focus,
+fieldset[disabled] .btn-qty.focus,
+.btn-qty.disabled:active,
+.btn-qty[disabled]:active,
+fieldset[disabled] .btn-qty:active,
+.btn-qty.disabled.active,
+.btn-qty[disabled].active,
+fieldset[disabled] .btn-qty.active {
+  background-color: MediumOrchid;
+  border-color: Orchid;
+}
+.btn-qty .badge {
+  color: MediumOrchid;
+  background-color: #fff;
+}
+

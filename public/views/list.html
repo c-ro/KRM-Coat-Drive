@@ -29,35 +29,20 @@
 					</div>
 					<div class="col-xs-12">
 						<input class="form-control" id="phone" placeholder=" Phone eg: 555-555-5555" type="text" ng-model="person.phone"><br>
-
-				<!-- QTY RADIOS --> 
-					<div class="form-group">
-					  <label class="col-md-4 control-label" for="radios"></label>
-					  <div class="col-md-4"> 
-					    <label class="radio-inline" for="radios-0">
-					      <input type="radio" name="radios" id="radios-0" value="1" checked="checked" ng-model="person.qty"> 
-					      1
-					    </label> 
-					    <label class="radio-inline" for="radios-1">
-					      <input type="radio" name="radios" id="radios-1" value="2" ng-model="person.qty">
-					      2
-					    </label> 
-					    <label class="radio-inline" for="radios-2">
-					      <input type="radio" name="radios" id="radios-2" value="3" ng-model="person.qty">
-					      3
-					    </label>
-					  <div class="col-md-4"> 
-					    <label class="radio-inline" for="radios-2">
-					      <input type="radio" name="radios" id="radios-3" value="4" ng-model="person.qty">
-					      4
-					    </label> 
-					    <label class="radio-inline" for="radios-4">
-					      <input type="radio" name="radios" id="radios-4" value="5" ng-model="person.qty">
-					      5+
-					    </label> 
-					  </div>
+					<div class="qty container">
+				<!-- QTY RADIOS -->
+					<span>How many coats can you pledge to give?</span><br>
+					    <div class="btn-group">
+					        <label class="btn btn-qty" ng-model="person.qty" uib-btn-radio="1">1</label>
+					        <label class="btn btn-qty" ng-model="person.qty" uib-btn-radio="2">2</label>
+					        <label class="btn btn-qty" ng-model="person.qty" uib-btn-radio="3">3</label>
+					        <label class="btn btn-qty" ng-model="person.qty" uib-btn-radio="4">4</label>
+					        <label class="btn btn-qty" ng-model="person.qty" uib-btn-radio="5">5</label>
+					        <label class="btn btn-qty" ng-model="person.qty" uib-btn-radio="6">6</label>
+					        <label class="btn btn-qty" ng-model="person.qty" uib-btn-radio="7">7</label>
+					    </div>
+					    <div>&nbsp</div>
 					</div>
-
 
 					<div class="col-xs-12">
 						<textarea class="form-control" id="notes" placeholder="notes. . ." row="5" col="10" ng-model="person.notes"></textarea><br>
