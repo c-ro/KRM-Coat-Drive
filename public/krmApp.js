@@ -12,6 +12,17 @@ angular.module('krm', ['ui.router', 'ui.bootstrap', 'ngDialog'])
 					return list.getAll();
 				}]
 			}
+		})
+		.state('admin', {
+			url: '/admin',
+			templateUrl: 'views/admin.html',
+			controller: 'AppCtrl',
+			resolve: {
+				itemPromise: ['list', function (list){
+					return list.getAll();
+				}]
+			}
+
 		});
 
 		$urlRouterProvider.otherwise('/');

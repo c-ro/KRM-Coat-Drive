@@ -1,64 +1,103 @@
-<div>
-  <script type="text/ng-template" id="alert.html">
-    <div class="alert" style="background-color:#fa39c3;color:white" role="alert">
-      <div ng-transclude></div>
-    </div>
-  </script>
-  <uib-alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</uib-alert>
-</div>
-
 <div class="container">
-	<div>
-		Total number of pledges: {{pledges}}
-	</div>
-	<form>
-		<div id="form-container">
-			<div id="inputs-container">
-				<br>
-				<div class="form-group">
-					<div class="name-input col-xs-6">
-						<input class="form-control " id="first-name-input" placeholder=" First Name" type="text" ng-model="person.firstname">
-					</div>
+   
+  <div class="row">
 
-					<div class="name-input col-xs-6">
-						<input class="form-control" id="last-name-input" placeholder=" Last Name" type="text" ng-model="person.lastname"><br>
-					</div>
-				</div>
+    <div class="col-sm-6">
+      <div>
+            <h2>Kentucky Refugee Ministries<br><b>Winter Coat Drive</b></h2><hr>
+           <div  class="main-text">
+	            <span class="main-text">
+	              &emsp;On December 6th 2015 we'll be hitting the roads in <b>Fayette County</b> to round up donations of winter coats, hats, scarves, and gloves to Kentucky Refugee Ministries.  Help give KRM give a warm welcome to some of our newest neighbors!
+	            </span><br><br>
+	            <span class="main-text">
+	              &emsp;All you have to do is pledge your items by using the form below and leave them on your porch/driveway for pickup by volunteers on Sunday, December 6th.  We'll remind you via SMS the day before.
+	            </span><br><br>
+	            <span class="main-text">
+	              &emsp;If you would like to help KRM but have no winter items to contribute you can <a href="http://kyrm.org/ways-to-give/donate-now/" target="new">make a donation by clicking this link</a> or help us by spreading the word on social media:</span>
 
-				<div class="form-group">
-					<div class="col-xs-12">
-						<input class="form-control" id="address" placeholder=" Address" type="text" ng-model="person.address"><br>
-					</div>
-					<div class="col-xs-12">
-						<input class="form-control" id="phone" placeholder=" Phone eg: 555-555-5555" type="text" ng-model="person.phone"><br>
-					<div class="qty container">
-				<!-- QTY RADIOS -->
-					<span>How many coats can you pledge to give?</span><br>
-					    <div class="btn-group">
-					        <label class="btn btn-qty" ng-model="person.qty" uib-btn-radio="1">1</label>
-					        <label class="btn btn-qty" ng-model="person.qty" uib-btn-radio="2">2</label>
-					        <label class="btn btn-qty" ng-model="person.qty" uib-btn-radio="3">3</label>
-					        <label class="btn btn-qty" ng-model="person.qty" uib-btn-radio="4">4</label>
-					        <label class="btn btn-qty" ng-model="person.qty" uib-btn-radio="5">5</label>
-					        <label class="btn btn-qty" ng-model="person.qty" uib-btn-radio="6">6</label>
-					        <label class="btn btn-qty" ng-model="person.qty" uib-btn-radio="7">7</label>
-					    </div>
-					    <div>&nbsp</div>
-					</div>
+	              <div class="social">
+	              <div class="fb-share-button" data-href="http://bit.ly/KRMCoatDrive" data-layout="button_count"></div>
+	              <a href="https://twitter.com/share" class="twitter-share-button"{count} data-url="http://bit.ly/KRMCoatDrive" data-text="Pledge a winter coat to Kentucky Refugee Ministries" data-related="KRMlex">Tweet</a></div>
+        	</div>
+        </div>
 
-					<div class="col-xs-12">
-						<textarea class="form-control" id="notes" placeholder="notes. . ." row="5" col="10" ng-model="person.notes"></textarea><br>
-					</div>
-				</div>
+    </div>
+    
+<!-- SPLIT -->
 
-			<div id="button-container">
-				<button class="btn btn-primary" id="add-button" type="submit" ng-click="addPerson()">add</button>
+    <div class="col-sm-6">
+
+      <div>
+      	<h2>Pledge a donation today!</h2>
+        Total number of pledged coats: <b>{{getSum()}}</b>
+      </div>
+
+      <hr>
+
+      <div>
+      	Please leave items in a plastic bag marked "KRM"
+      </div>
+      
+      <form>
+        <div id="form-container">
+          <div id="inputs-container">
+            <br>
+            <div class="form-group">
+              <div class="name-input col-xs-6">
+                <input class="form-control " id="first-name-input" placeholder=" First Name" type="text" ng-model="person.firstname">
+              </div>
+
+              <div class="name-input col-xs-6">
+                <input class="form-control" id="last-name-input" placeholder=" Last Name" type="text" ng-model="person.lastname"><br>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="col-xs-12">
+                <input class="form-control" id="address" placeholder=" Address" type="text" ng-model="person.address"><br>
+              </div>
+              <div class="col-xs-12">
+                <input class="form-control" id="phone" placeholder=" Phone eg: 555-555-5555" type="text" ng-model="person.phone"><br>
+              <div class="qty container">
+            <!-- QTY RADIOS -->
+              <span>How many coats can you pledge to give?</span><br>
+                  <div class="btn-group">
+                      <label class="btn btn-qty" ng-model="person.qty" uib-btn-radio="1">1</label>
+                      <label class="btn btn-qty" ng-model="person.qty" uib-btn-radio="2">2</label>
+                      <label class="btn btn-qty" ng-model="person.qty" uib-btn-radio="3">3</label>
+                      <label class="btn btn-qty" ng-model="person.qty" uib-btn-radio="4">4</label>
+                      <label class="btn btn-qty" ng-model="person.qty" uib-btn-radio="5">5</label>
+                      <label class="btn btn-qty" ng-model="person.qty" uib-btn-radio="6">6</label>
+                      <label class="btn btn-qty" ng-model="person.qty" uib-btn-radio="7">7</label>
+                  </div>
+                  <div>&nbsp</div>
+              </div>
+
+              <div class="col-xs-12">
+                <textarea class="form-control" id="notes" placeholder="notes. . ." row="5" col="10" ng-model="person.notes"></textarea><br>
+              </div>
+            </div>
+
+          <div id="button-container">
+            <button class="btn btn-success" id="add-button" type="submit" ng-click="addPerson()">Sign Me Up!</button>
+          </div>
+
+		<div>
+      <br>
+			<script type="text/ng-template" id="alert.html">
+			<div class="alert" style="background-color:#fa39c3;color:white" role="alert">
+			<div ng-transclude></div>
 			</div>
-
-
-			<div>
-				&nbsp
-			</div>
+			</script>
+		<uib-alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)"><b>{{alert.msg}}</b></uib-alert>
 		</div>
-	</form>
+
+          <div>
+            &nbsp
+          </div>
+        </div>
+      </form>
+    </div>
+
+  </div>
 </div>

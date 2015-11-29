@@ -43,6 +43,13 @@ app.get('/list', function (req, res) {
 	});
 });
 
+app.get('/admin', function (req, res) {
+	Person.find(function (err, docs){
+		console.log(docs);
+		res.json(docs);
+	});
+});
+
 app.get('/list/:id', function (req, res) {
 	var person = req.params.id;
 	console.log(person);
@@ -60,8 +67,14 @@ app.post('/list', function(req, res){
 	var person = new Person(req.body);
 
 	person.save(req.body, function (err, person){
-		if (err){
-			res.json(err);
+		if (err && err.errors.address){
+			res.send({message: "Address is required."});
+		} else if (err && err.errors.firstname){
+			res.send({message: "First name is required."});
+		} else if (err && err.errors.lasstname){
+			res.send({message: "Last name is required."});
+		} else if (err && err.errors.phone){
+			res.send({message: "Phone number is required."});
 		} else {
 			res.json(person);
 		}

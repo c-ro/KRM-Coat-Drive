@@ -8,7 +8,15 @@
 
 	$scope.alerts = alerts;
 
-	$scope.pledges = 17;
+	$scope.getSum = function(){
+		var sum = 0;
+		 
+		for(var i = 0; i< list.persons.length; i++){
+			sum = sum + list.persons[i].qty;
+		}
+
+		return sum;
+	};
 
 	$scope.addPerson = function(){
 

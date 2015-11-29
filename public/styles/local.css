@@ -1,7 +1,6 @@
 html,
 body {
     width: 100%;
-    height: 100%;
 }
 
 body {
@@ -9,7 +8,7 @@ body {
 }
 
 hr {
-    max-width: 50px;
+    max-width: 400px;
     border-color: Orchid;
     border-width: 3px;
 }
@@ -37,12 +36,6 @@ h4,
 h5,
 h6 {
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
-}
-
-p {
-    margin-bottom: 20px;
-    font-size: 16px;
-    line-height: 1.5;
 }
 
 .bg-qty {
@@ -174,10 +167,11 @@ aside {
 header {
     position: relative;
     width: 100%;
-    min-height: auto;
+/*    min-height: auto;*/
     text-align: center;
     color: #000;
     background-image: url(../img/header.jpg);
+    background-size: cover;
     background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -213,7 +207,7 @@ header .header-content .header-content-inner p {
 
 @media(min-width:768px) {
     header {
-        min-height: 100%;
+/*        min-height: 100%;*/
     }
 
     header .header-content {
@@ -270,7 +264,7 @@ header .header-content .header-content-inner p {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 100%;
+/*    height: 100%;*/
     text-align: center;
     color: #fff;
     opacity: 0;
@@ -498,16 +492,12 @@ th {
 	margin: 0;
 }
 
-table {
-    color: black;
-    font-weight: bold;
-}
-
 .jumbotron {
 	display: inline-block;
 	background-color: rgba(255, 255, 255, 0.9);
 	padding: 0;
-	max-width: 600px;
+	max-width: 100%;
+    margin-top: 10%;
 	margin-right: auto;
 	margin-left: auto;
 }
@@ -570,3 +560,19 @@ fieldset[disabled] .btn-qty.active {
   background-color: #fff;
 }
 
+.main-text{
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: left;
+    font-size: 16px;
+}
+
+.social {
+    padding-top: 5px;
+    text-align: center;
+}
+
+iframe[style] { /* to select the outer-most element of the twitter button */
+    display: inline-block;
+    vertical-align: bottom !important;
+} 

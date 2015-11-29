@@ -1,0 +1,53 @@
+<div>
+  <script type="text/ng-template" id="alert.html">
+    <div class="alert" style="background-color:#fa39c3;color:white" role="alert">
+      <div ng-transclude></div>
+    </div>
+  </script>
+  <uib-alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</uib-alert>
+</div>
+
+<div>
+	<table class="table">	
+		<thead>
+			<th>
+				first
+			</th>
+			<th>
+				last
+			</th>
+			<th>
+				address
+			</th>
+			<th>
+				qty
+			</th>
+			<th>
+				notes		
+			</th>
+			<th>
+				&nbsp
+			</th>
+		</thead>
+		<tr ng-repeat="person in list">
+			<td>
+				{{person.firstname}}
+			</td>
+			<td>
+				{{person.lastname}} 
+			</td>
+			<td>
+				{{person.address}}
+			</td>
+			<td>
+				{{person.qty}}
+			</td>
+			<td>
+				{{person.notes}}
+			</td>
+			<td ng-click="deletePerson(person._id)">
+				X
+			</td>
+		</tr>
+	</table>
+</div>

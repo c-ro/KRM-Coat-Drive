@@ -62,6 +62,21 @@
 
 <body id="page-top" ng-app="krm">
 
+<!-- facebook sharing -->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+<!-- Twitter Share -->
+    <script>
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+    </script>
+
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -79,16 +94,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="#about">About</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#services">Services</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
+                        <a href="http://kyrm.org/ways-to-give/donate-now/" target="new">Click Here to Donate Directly to KRM</a>
                     </li>
                 </ul>
             </div>
@@ -98,13 +104,8 @@
     </nav>
 
     <header>
-        <div class="header-content">
-            <div class='jumbotron'>
-                <div>
-                    <h2>Pledge to donate your coats!</h2>
-                </div>
-                <ui-view></ui-view>
-            </div>
+        <div class='jumbotron'>
+            <ui-view></ui-view>
         </div>
     </header>
 <!-- 

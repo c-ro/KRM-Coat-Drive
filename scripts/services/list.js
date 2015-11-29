@@ -13,11 +13,11 @@ angular.module('krm').factory('list', ['$http', 'alerts',
 
 		list.addPerson = function(person){
 			$http.post('/list', person).success(
-				function(error, response){
-					if (error.message) {
-						alerts.open(error.errors.phone.message, "danger");
+				function(data){
+					if (data.message) {
+						alerts.open(data.message, "danger");
 					} else {
-						list.persons.push(response);
+						alerts.open("Thanks! We'll text " + data.phone + " to remind you.", "success");
 						list.getAll();
 					}
 			});
@@ -44,14 +44,6 @@ angular.module('krm').factory('list', ['$http', 'alerts',
 		list.purchasePerson = function(person){
 			$http.put('/list/purchase/' + person._id, person);
 			list.getAll();
-		};
-
-		list.deletePurchase = function (person){
-			$http.put('/purchase/remove/' + person._id + '/' + person.date).success(
-				function(res){
-					list.getAll();
-				}
-			);
 		};
 
 		return list;
