@@ -14,6 +14,7 @@
     "angular-recaptcha": "^2.2.5",
     "body-parser": "^1.14.1",
     "express": "^4.13.3",
+    "jsonwebtoken": "^5.4.1",
     "mongo": "^0.1.0",
     "mongoose": "^4.2.6",
     "ng-dialog": "^0.5.5"
