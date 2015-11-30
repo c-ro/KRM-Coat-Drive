@@ -16,6 +16,8 @@ angular.module('krm').factory('list', ['$http', 'alerts',
 				function(data){
 					if (data.message) {
 						alerts.open(data.message, "danger");
+					} else if (data.code === "11000"){
+						alerts.open("already registered.");
 					} else {
 						alerts.open("Thanks! We'll text " + data.phone + " to remind you.", "success");
 						list.getAll();

@@ -17,14 +17,14 @@ var personSchema = new Schema({
 	firstname: { type: String, required: true },
 	lastname: { type: String, required: true },
 	address: { type: String, required: true },
-	phone: { type: String, validate: {
+	phone: { type: String, unique: true, validate: {
 				validator: function(v) {
 					return (/^(\([0-9]{3}\)\s*|[0-9]{3}\-)[0-9]{3}-[0-9]{4}$/).test(v);
 				},
 					message: '{VALUE} is not a valid phone number!'
 				}
 			},
-	qty: { type: Number },
+	qty: { type: Number, default: 1 },
 	notes: { type: String }
 });
 
@@ -43,12 +43,12 @@ app.get('/list', function (req, res) {
 	});
 });
 
-// app.get('/admin', function (req, res) {
-// 	Person.find(function (err, docs){
-// 		console.log(docs);
-// 		res.json(docs);
-// 	});
-// });
+app.get('/admin', function (req, res) {
+	Person.find(function (err, docs){
+		console.log(docs);
+		res.json(docs);
+	});
+});
 
 app.get('/list/:id', function (req, res) {
 	var person = req.params.id;
@@ -67,7 +67,9 @@ app.post('/list', function(req, res){
 	var person = new Person(req.body);
 
 	person.save(req.body, function (err, person){
-		if (err && err.errors.address){
+		if(err && err.message){
+			res.json(err);
+		} else if (err && err.errors.address){
 			res.send({message: "Address is required."});
 		} else if (err && err.errors.firstname){
 			res.send({message: "First name is required."});
